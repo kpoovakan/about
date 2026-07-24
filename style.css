@@ -53,3 +53,9 @@ body {
     margin: 0px;
     box-sizing: border-box;
 }
+
+iframe {
+    border: none;
+    outline: none;
+    float: right;
+}
