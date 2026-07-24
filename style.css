@@ -1,6 +1,55 @@
+:root {
+    --colorBackground: #f6f4eb;
+    --colorForeground: #8385b1;
+    --colorAccent: #151c42;
+}
+
+@font-face {
+    font-family: "wizardry";
+    src: url("https://kpoovakan.github.io/wizardry.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     padding: 0px;
     margin: 0px;
     background-color: var(--colorBackground);
     color: var(--colorForeground);
+    font-family: "Neucha", serif;
+    font-size: 20px;
+    display: block;
+    box-sizing: border-box;
+    a:link, a:visited {
+        color: var(--colorAccent);
+        text-decoration: none;
+    }
+    a:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+}
+
+.main-title {
+    font-family: "wizardry", serif;
+    color: var(--colorAccent);
+    width: 100%;
+    margin: 3vh auto;
+    text-align: center;
+    font-size: min(10vw, 75pt);
+    a:link, a:visited {
+        color: var(--colorAccent);
+        text-decoration: none;
+    }
+    a:hover {
+        cursor: pointer;
+    }
+}
+
+.intro {
+    width: 100%;
+    text-align: justify;
+    padding: 0px 3vw;
+    margin: 0px;
+    box-sizing: border-box;
 }
