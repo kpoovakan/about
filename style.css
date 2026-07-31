@@ -54,8 +54,13 @@ body {
     box-sizing: border-box;
 }
 
+.iframes {
+    display: flex;
+    margin: 13px;
+    float: right;
+}
+
 iframe {
     border: none;
     outline: none;
-    float: right;
 }
