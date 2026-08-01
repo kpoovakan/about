@@ -1,4 +1,7 @@
 "use strict";
+window.onload = function() {
+    document.getElementById("enableJavaScript").remove();
+}
 
 function pi() {
     alert(`
@@ -27,4 +30,16 @@ function showLinks() {
 function replace(id, link) {
     let words = document.getElementById(id).innerHTML;
     document.getElementById(id).innerHTML = `<a href="`+link+`" target="_blank">`+words+`</a>`;
+}
+
+function showGame(name) {
+    document.getElementById(name).showModal();
+    let nameFrame = name + "Frame";
+    document.getElementById(nameFrame).style.display = "inline";
+}
+
+function hideGame(name) {
+    document.getElementById(name).close();
+    let nameFrame = name + "Frame";
+    document.getElementById(nameFrame).style.display = "none";
 }
