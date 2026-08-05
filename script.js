@@ -1,4 +1,6 @@
 "use strict";
+globalThis.gameIDs = ["1210100138", "1285004431", "1351487347"];
+globalThis.gameNames = ["harvest", "bakeAPie", "tiles"];
 window.onload = function() {
     document.getElementById("enableJavaScript").remove();
 }
@@ -36,10 +38,14 @@ function showGame(name) {
     document.getElementById(name).showModal();
     let nameFrame = name + "Frame";
     document.getElementById(nameFrame).style.display = "inline";
+    let game = gameNames.indexOf(name);
+    game = gameIDs[game];
+    document.getElementById(nameFrame).src = "https://turbowarp.org/" + game + "/embed";
 }
 
 function hideGame(name) {
     document.getElementById(name).close();
     let nameFrame = name + "Frame";
     document.getElementById(nameFrame).style.display = "none";
+    document.getElementById(nameFrame).src = "about:blank";
 }
